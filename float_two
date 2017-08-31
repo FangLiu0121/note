@@ -1,0 +1,13 @@
+function float_two() {
+                var input_val = $(".price_input").val() + "",
+                    beforeDot_val = input_val.split(".")[0],
+                    afterDot_val = input_val.split(".")[1];
+                if (afterDot_val) {
+                    var afterDot_length = afterDot_val.length;
+                    if (afterDot_length > 2) {
+                        afterDot_val = afterDot_val.slice(0, 2);
+                        input_val = beforeDot_val + "." + afterDot_val;
+                        $(".price_input").val(input_val);
+                    }
+                }
+            }
